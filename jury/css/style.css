@@ -1,0 +1,323 @@
+/* хром, сафари */
+::-webkit-scrollbar {
+display: none;
+}
+
+html { -ms-overflow-style: none; }
+
+html {overflow: -moz-scrollbars-none;}
+
+@font-face {
+  font-family: 'HACKED';
+  src: url(font/HACKED.ttf);
+  /*font-family: 'Rubik-Bold';
+  src: url(font/Rubik-Bold.ttf)*/
+}
+
+body{
+  background:  #212121;
+}
+
+#username, #password{
+  text-align: center;
+  color: #fff;
+  background: transparent;
+  height: 34px;
+  width: 40%;
+  border: 0;
+  line-height: 1;
+  border-bottom: 2px solid #E53935;
+  outline: 0;
+}
+
+#content {
+  visibility: hidden;
+}
+#map:active {
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+#tmp, #map, body {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+#tmp {
+  width: 3705px;
+  height: 2547px;
+  background-image: url(../img/map.png);
+  background-size: cover;
+  -moz-background-size: cover;  /* Firefox 3.6 */
+  background-position: center;  /* Internet Explorer 7/8 */
+  z-index: 1;
+}
+
+.easy, .medium, .hard, .madness  {
+  border-radius: 33px;
+  box-shadow:0 0 15px #1A237E;
+  cursor: pointer;
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background-size: cover;
+  -moz-background-size: cover;  /* Firefox 3.6 */
+  background-position: center;  /* Internet Explorer 7/8 */
+}
+
+.easy {
+  background-image: url(../img/easy.png);
+}
+.medium {
+  background-image: url(../img/medium.png);
+}
+.hard {
+  background-image: url(../img/hard.png);
+}
+.madness {
+  background-image: url(../img/madness.png);
+}
+
+.madness:hover{
+  box-shadow:0 0 20px #FF5722;
+}
+
+.hard:hover{
+  box-shadow:0 0 20px #FF5722;
+}
+
+.medium:hover{
+  box-shadow:0 0 20px #FF5722;
+}
+
+.easy:hover{
+  box-shadow:0 0 20px #FF5722;
+}
+
+#login, #task {
+  visibility: hidden;
+  z-index: 10;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -250px;
+  width: 400px;
+  height: auto;
+}
+
+#task{
+  user-select: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  left: 25%;
+  margin-left: 0;
+  width: 50%;
+  border: 4px solid rgba(229, 57, 53, 0.9);
+  box-shadow: 1px 20px 20px 10px rgba(0,0,0,0.7);
+}
+
+#task-title {
+  font-family: "HACKED";
+  opacity: 0.9;
+  background-color: #E53935;
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+  line-height: normal;
+  height: auto;
+  text-align: center;
+  padding: 10px;
+}
+#task-desc {
+  font-family: monospace;
+  color: white;
+  opacity: 0.9;
+  text-align: left;
+  padding: 10px;
+  background-color: #212121;
+  font-size: 20px;
+  line-height: normal;
+}
+#task-flag {
+  font-size: 24px;
+  font-family: monospace;
+  font-weight: bold;
+  height: 25px;
+  line-height: normal;
+  padding-top: 5px;
+  padding-left: 5px;
+  opacity: 0.9;
+  background-color: #212121;
+  position:relative;
+  overflow:hidden;
+}
+#task-flag > * {
+  font-size: 24px;
+  font-family: monospace;
+  font-weight: bold;
+}
+#keyphrase {
+  outline: 0;
+  border: 0;
+  float:left;
+  width: 72%;
+  position:absolute;
+  left:0;
+  top:0;
+  height: 100%;
+}
+#btn{
+  font-size: 24px;
+  position:absolute;
+  left: 72%;
+  width: 28%;
+  top:0;
+  height: 100%;
+  border: 0;
+  background: #E53935;
+  color: white;
+}
+/*#btn{
+  font-family: monospace;
+  border: 0;
+  margin-left: 60px;
+  background: #E53935;
+  color: white;
+  height: 25px;
+  font-weight: bold;
+}*/
+
+#btn:hover{
+  background: #B71C1C;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  border: 1px solid #E53935;
+}
+
+#header > * {
+  line-height: 70px;
+  min-height: 70px;
+}
+
+#header-table {
+  opacity: 0.9;
+  font-family: monospace;
+  background: #212121;
+  float: left;
+  min-width: 300px;
+}
+
+/* Change the background color of the header-table block  when the dropdown content is shown */
+#header-table:hover{
+    background-color: #E53935;
+}
+
+#header-title {
+  font-size: 40px;
+  font-family: "HACKED";
+  color: #fff;
+  cursor: default;
+  text-align: center;
+  min-width: calc(100% - 600px);
+  float: left;
+  background-color: #212121;
+  opacity: 0.9;
+}
+#header-profile {
+  opacity: 0.9;
+  float:right;
+  width:300px;
+  min-height: 40px;
+  background: #212121;
+}
+
+#header-profile:hover{
+    background-color: #E53935;
+}
+
+#header-content {
+  position: fixed;
+  margin-top: 50px;
+  display: block;
+  z-index: 10;
+  width: 500px;
+  height: 500px;
+  border: 2px solid #3EF1B8;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
+#login_header{
+  font-size: 20px;
+  padding-bottom: 40px;
+}
+
+#login {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Rubik-Bold";
+    color: #fff;
+    padding: 100px 12px;
+    text-align: center;
+    line-height: 24px;
+    background-color: #212121;
+    border: 2px solid #E53935;
+    box-shadow: 3px -11px 39px -7px #000000 inset;
+}
+
+#login::after{
+  border-left: 2px solid #E53935;
+  width: 49px;
+  height: 30px;
+  content: '';
+  position: absolute;
+  transform: rotate(50deg);
+  right: -31px;
+  bottom: -25px;
+  background: #212121 ;
+}
+
+#login::before {
+  border-right: 2px solid #E53935;
+  width: 49px;
+  height: 30px;
+  content: '';
+  position: absolute;
+  transform: rotate(50deg);
+  left: -31px;
+  top: -25px;
+  background: inherit;
+}
+
+#input_submit{
+  outline: 0;
+  margin-top: 15px;
+  font-family: "Rubik-Bold";
+  color: #fff;
+  text-align: center;
+  line-height: 24px;
+  background-color: #212121;
+  border: 2px solid #E53935;
+}
+
+#input_submit:hover{
+  background: #fff;
+  color: #212121;
+  cursor: pointer;
+}

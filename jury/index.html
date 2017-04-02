@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/example.css">
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="js/js.cookie.js" charset="utf-8"></script>
+  <script src="js/showdown.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  //document.cookie = "ctf=kek";
+  </script>
+</head>
+<body>
+  <form id="login-form">
+    <div id="login">
+    <div id="login_header"> Добро пожаловать на NSK School CTF 2017!</div>
+    Введите свои данные авторизации
+    <div>
+      <input
+          type="text"
+          placeholder="example@site.com"
+          id="username"
+          name="username"/>
+      </div>
+    <div>
+      <input
+          placeholder="password"
+          type="password"
+          id="password"
+          name="password"/>
+      </div>
+    <div>
+      <input id="input_submit" type="submit" value="Войти"></div>
+  </div>
+  </form>
+  <div id="content">
+    <div id="header">
+      <div id="header-table" class="dropdown">
+        <button class="dropbtn" onmouseover="checkScore();">Рейтинг</button>
+        <div id="teams" class="dropdown-content">
+        </div>
+      </div>
+      <div id="header-title">
+        NSK School CTF 2017
+      </div>
+      <div id="header-profile" class="dropdown">
+        <button class="dropbtn" id="profile-usr" onmouseover="checkProfile();">Профиль (Life)</button>
+        <div class="dropdown-content">
+          <div class='cont-content'>
+          <a href="#" id="profile-pts">Очков: </a>
+          <a href="#" id="profile-slv" >Тасков: </a>
+          <a href="#" id="profile-pos">Позиция: </a>
+          <a href="#" id="profile-att">Посылок: </a>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="map">
+      <div id="task">
+        <div id="task-title"> Title
+        </div>
+        <div id="task-desc">Description</div>
+        <div id="task-flag"></div>
+      </div>
+      <div id="tmp">
+      </div>
+      <div id="task1" class="point easy" style="left: 313px; top: 2105px;" task_id=1></div>
+  	<div id="task2" class="point easy" style="left: 641px; top: 2137px;" task_id=2></div>
+  	<div id="task3" class="point easy" style="left: 1377px; top: 1793px;" task_id=3></div>
+  	<div id="task4" class="point medium" style="left: 881px; top: 1721px;" task_id=4></div>
+  	<div id="task5" class="point hard" style="left: 433px; top: 1433px;" task_id=5></div>
+  	<div id="task6" class="point easy" style="left: 729px; top: 1089px;" task_id=6></div>
+  	<div id="task7" class="point easy" style="left: 481px; top: 729px;" task_id=7></div>
+  	<div id="task8" class="point easy" style="left: 857px; top: 553px;" task_id=8></div>
+  	<div id="task9" class="point easy" style="left: 1353px; top: 1633px;" task_id=9></div>
+  	<div id="task10" class="point medium" style="left: 1649px; top: 1217px;" task_id=10></div>
+  	<div id="task11" class="point hard" style="left: 1769px; top: 1665px;" task_id=11></div>
+  	<div id="task12" class="point medium" style="left: 1745px; top: 2097px;" task_id=12></div>
+  	<div id="task13" class="point medium" style="left: 2025px; top: 1225px;" task_id=13></div>
+  	<div id="task14" class="point hard" style="left: 2153px; top: 1969px;" task_id=14></div>
+  	<div id="task15" class="point easy" style="left: 1841px; top: 449px;" task_id=15></div>
+  	<div id="task16" class="point hard" style="left: 2545px; top: 1289px;" task_id=16></div>
+  	<div id="task17" class="point easy" style="left: 2657px; top: 881px;" task_id=17></div>
+  	<div id="task18" class="point easy" style="left: 2969px; top: 1369px;" task_id=18></div>
+  	<div id="task19" class="point madness" style="left: 2737px; top: 2129px;" task_id=19></div>
+  	<div id="task20" class="point easy" style="left: 3249px; top: 2345px;" task_id=20></div>
+  	<div id="task21" class="point medium" style="left: 3073px; top: 585px;" task_id=21></div>
+  	<div id="task22" class="point madness" style="left: 3473px; top: 1273px;" task_id=22></div>
+  	<div id="task23" class="point easy" style="left: 3457px; top: 1841px;" task_id=23></div>
+  	<div id="task24" class="point hard" style="left: 3561px; top: 297px;" task_id=24></div>
+  	<div id="task25" class="point easy" style="left: 1769px; top: 313px;" task_id=25></div>
+
+    </div>
+  </div>
+</body>
+<script src="js/script.js" charset="utf-8"></script>
+</html>
