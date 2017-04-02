@@ -1,11 +1,10 @@
-# This repository for developing NSK Home CTF 2016
+# This repository for developing NSK School CTF 2017
 
 ### Flag format
-SCTF{english_leet_or_md5}
+CTF{english_leet_or_md5}
 
 ### Deadline
-12.11.2016 
+10.03.2017
 
 ### TODO
-10 tasks
-2 services
+25 tasks
